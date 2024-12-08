@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pro690-sampleapp
+  labels:
+    app: pro690-sampleapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pro690-sampleapp
+  template:
+    metadata:
+      labels:
+        app: pro690-sampleapp
+    spec:
+      containers:
+      - name: pro690-sampleapp
+        image: pro690finapp.azurecr.io/pro690-sampleapp:latest
+        ports:
+        - containerPort: 3000
