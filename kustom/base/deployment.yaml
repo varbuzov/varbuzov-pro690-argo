@@ -19,3 +19,4 @@ spec:
         image: pro690finapp.azurecr.io/pro690-sampleapp:latest
         ports:
         - containerPort: 3000
+
